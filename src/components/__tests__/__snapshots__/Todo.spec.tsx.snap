@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="todo-1"
+>
+  <h1>
+    wash dishes
+  </h1>
+</div>
+`;
+
+exports[`matches snapshot without react-test-renderer 1`] = `
+<div>
+  <div
+    data-testid="todo-1"
+  >
+    <h1>
+      wash dishes
+    </h1>
+  </div>
+</div>
+`;
