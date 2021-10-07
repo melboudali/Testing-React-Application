@@ -1,17 +1,21 @@
-import Todo from "./components/Todo";
+import "./App.css";
+import Banner from "./components/Banner/Banner";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import TodoPage from "./pages/TodoPage/TodoPage";
+import FollowersPage from "./pages/FollowersPage/FollowersPage";
 
-const App = () => {
-	const todos = [
-		{ id: 1, title: "wash dishes", completed: false },
-		{ id: 2, title: "make dinner", completed: true }
-	];
+function App() {
 	return (
-		<div>
-			{todos.map(todo => (
-				<Todo todo={todo} key={todo.id} />
-			))}
+		<div className="App">
+			<BrowserRouter>
+				<Banner />
+				<Switch>
+					<Route strict exact path="/" component={TodoPage} />
+					<Route strict exact path="/followers" component={FollowersPage} />
+				</Switch>
+			</BrowserRouter>
 		</div>
 	);
-};
+}
 
 export default App;
